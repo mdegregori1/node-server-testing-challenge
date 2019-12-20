@@ -16,7 +16,7 @@ server.use('/api/cars', carsRouter);
 
 
 server.get('/', (req, res) => {
-  res.send("last assignment test :) ");
+  res.send({api: "last assignment test :) "});
 });
 
 module.exports = server;

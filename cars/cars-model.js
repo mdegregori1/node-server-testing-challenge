@@ -4,17 +4,14 @@ module.exports = {
   add,
   find,
   remove
-//   findBy,
-//   findById,
+
 };
 
 function find() {
   return db('cars').select('id', 'make', 'model', 'year');
+
 }
 
-// function findBy(filter) {
-//   return db('users').where(filter);
-// }
 
 function add(car) {
   return db('cars').insert(car)
@@ -30,8 +27,3 @@ function remove(id){
   .del()
 }	
 
-// function findById(id) {
-//   return db('users')
-//     .where({ id })
-//     .first();
-// }

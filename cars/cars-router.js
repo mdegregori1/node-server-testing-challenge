@@ -3,7 +3,7 @@ const router = require("express").Router();
 const Cars = require("./cars-model.js");
 
 router.post('/', (req, res) => {
-    let car = req.body;
+    const car = req.body;
 
     Cars.add(car)
     .then(cars => {
@@ -11,6 +11,7 @@ router.post('/', (req, res) => {
     })
     .catch(err => {
         console.log(err)
+        res.status(500).json({errorMessage:"error adding a car"})
     })
   });
 
