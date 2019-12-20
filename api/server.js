@@ -1,9 +1,8 @@
 const express = require('express');
-require('dotenv').config() // means we can create a dotenv file
+require('dotenv').config() 
 
 
-// const authRouter = require('../auth/auth-router.js');
-// const usersRouter = require('../users/users-router.js');
+const carsRouter = require('../cars/cars-router.js');
 
 const server = express();
 
@@ -12,8 +11,8 @@ server.use(express.json());
 
 
 
-// server.use('/api/auth', authRouter);
-// server.use('/api/users', usersRouter);
+
+server.use('/api/users', carsRouter);
 
 
 server.get('/', (req, res) => {
