@@ -12,7 +12,7 @@ server.use(express.json());
 
 
 
-server.use('/api/users', carsRouter);
+server.use('/api/cars', carsRouter);
 
 
 server.get('/', (req, res) => {
